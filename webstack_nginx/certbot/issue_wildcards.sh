@@ -10,7 +10,6 @@ issue() {
     --manual-auth-hook /opt/certbot/regru-auth.sh \
     --manual-cleanup-hook /opt/certbot/regru-cleanup.sh \
     --manual-public-ip-logging-ok \
-    --dns-propagation-seconds "$DNS_PROPAGATION_SECONDS" \
     -d "$domain" -d "*.$domain"
 }
 

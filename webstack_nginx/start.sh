@@ -15,6 +15,11 @@ nginx
 echo "▶ issuing wildcard certificates"
 /opt/certbot/issue_wildcards.sh
 
+# enable https includes (best effort)
+if [ -f /etc/nginx/include/https_include.disabled.conf ]; then
+  mv /etc/nginx/include/https_include.disabled.conf /etc/nginx/include/https_include.conf
+fi
+
 echo "▶ reloading nginx with HTTPS"
 nginx -t
 nginx -s reload
