@@ -12,10 +12,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN mkdir -p /opt/certbot
 
-COPY webstack_nginx/certbot/ /opt/certbot/
+COPY web_stack/webstack__nginx/webstack_nginx/certbot/ /opt/certbot/
 RUN chmod +x /opt/certbot/*.sh
 
-COPY webstack_nginx/start.sh /start.sh
+COPY web_stack/webstack__nginx/webstack_nginx/start.sh /start.sh
 RUN chmod +x /start.sh
 
 EXPOSE 80 443
