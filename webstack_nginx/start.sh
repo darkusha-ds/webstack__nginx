@@ -4,8 +4,8 @@ set -euo pipefail
 : "${CERTBOT_EMAIL:=darkusha.ds@gmail.com}"
 : "${DNS_PROPAGATION_SECONDS:=120}"
 
-if [[ -z "${REGRU_USERNAME:-}" || -z "${REGRU_PASSWORD:-}" ]]; then
-  echo "❌ REGRU_USERNAME / REGRU_PASSWORD not set"
+if [[ -z "${TIMEWEB_LOGIN:-}" || -z "${TIMEWEB_PASSWORD:-}" || -z "${TIMEWEB_API_KEY:-}" ]]; then
+  echo "❌ TIMEWEB_LOGIN / TIMEWEB_PASSWORD / TIMEWEB_API_KEY not set"
   exit 1
 fi
 

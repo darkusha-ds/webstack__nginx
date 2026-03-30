@@ -7,8 +7,8 @@ issue() {
     --non-interactive --agree-tos \
     --email "$CERTBOT_EMAIL" \
     --manual --preferred-challenges dns \
-    --manual-auth-hook /opt/certbot/regru-auth.sh \
-    --manual-cleanup-hook /opt/certbot/regru-cleanup.sh \
+    --manual-auth-hook /opt/certbot/timeweb-auth.sh \
+    --manual-cleanup-hook /opt/certbot/timeweb-cleanup.sh \
     --manual-public-ip-logging-ok \
     -d "$domain" -d "*.$domain"
 }
